@@ -1,0 +1,88 @@
+nav > .nav.nav-tabs{
+
+    border: none;
+      color:#fff;
+      background:#272e38;
+      border-radius:0;
+    
+    }
+    nav > div a.nav-item.nav-link,
+    nav > div a.nav-item.nav-link.active {
+    border: none;
+      padding: 18px 25px;
+      color:#fff;
+      background:#272e38;
+      border-radius:0;
+    }
+    
+    .table td {
+        background:  rgba(72, 72, 76, 0.37);
+        
+        padding-top: .5em;
+        padding-bottom: .5em;
+    }
+    
+    
+    .tab-content{
+    background: #fdfdfd;
+      line-height: 25px;
+      border: 1px solid #ddd;
+      border-top:5px solid #e74c3c;
+      border-bottom:5px solid #e74c3c;
+      padding:30px 25px;
+    }
+    
+    nav > div a.nav-item.nav-link:hover,
+    nav > div a.nav-item.nav-link:focus
+    
+    {
+    border: none;
+      background: blueviolet;
+      color:#fff;
+      border-radius:0;
+      transition:background 0.20s linear;
+    }
+    .star-icon {
+        color: #ddd;
+        font-size:17px;
+        position: relative;
+    }
+    .star-icon.half:before {
+        color: #FDE16D;
+        content: '\2605'; /* Full star in UTF8 */
+        position: absolute;
+        left: 0;
+        width: 50%;
+        overflow: hidden;
+        text-shadow: 0 0 2px rgba(0,0,0,0.7);
+    }
+    .star-icon.full:before {
+        color: #FDE16D;
+        content: '\2605'; /* Full star in UTF8 */
+        position: absolute;
+        left: 0;
+        text-shadow: 0 0 2px rgba(0,0,0,0.7);
+     }
+     .btn-default {
+       background-color:blueviolet;
+       color:white;
+     }
+     /* .table-condensed {
+       padding:3px;
+     } */
+    
+     ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: black;
+      opacity: 1; /* Firefox */
+    }
+    
+    :-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: black;
+    }
+    
+    ::-ms-input-placeholder { /* Microsoft Edge */
+      color: black;
+    }
+    .search_input {
+      color:black;
+    }

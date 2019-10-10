@@ -1,0 +1,140 @@
+<section class="main">
+        <div class="layer">
+            
+            <div class="bottom-grid float-rt">
+                       
+                <br><br><br>
+                <div class="links float-rt">
+                    
+                    <ul class="links-unordered-list">										
+                        <li class="active">
+                            <a routerLink="/mentorlogin" class="">Logout</a>
+                        </li>				
+                    </ul>
+                </div><br>
+            </div>
+            <br>
+            <div class="container">
+                   
+                    
+                    <div class="container py-5">
+                            <div class="row-xs-12">
+                                    <div class="col-xs-12 ">
+                                      <nav>
+                                        <div class="nav nav-tabs nav-fill" id="nav-tab" role="tablist">
+                                          
+                                                <a class="nav-item nav-link" id="nav-ongoing-tab"  routerLink="/currenttrainings1" role="tab" aria-controls="nav-ongoing" aria-selected="false">Current Trainings</a>
+                                                <a class="nav-item nav-link" id="nav-completed-tab"  routerLink="/completedtrainings1" role="tab" aria-controls="nav-completed" aria-selected="false">Completed Trainings</a>
+                                                <a class="nav-item nav-link" id="nav-skills-tab"  routerLink="/mentoreditskills" role="tab" aria-controls="nav-skills" aria-selected="false">Edit Skills</a>
+                                                <a class="nav-item nav-link" id="nav-payments-tab"  routerLink="/mentorpayments" role="tab" aria-controls="nav-payments" aria-selected="false">Payments</a>
+                                          
+    
+                                        </div>
+                                      </nav>
+                                    </div>
+                                  </div><br>
+                                  <br>
+                                  <br>
+                                  <br><br>
+                            <div class="row" style="padding-left:18% "> 
+                                    <div class="col-xl-3 col-lg-5 mb-4" *ngFor = "let h of mentorCompleted|async">
+                                            <div class="bg-white rounded-lg p-4 shadow">
+                                              <h2 class="h6 font-weight-bold text-center mb-4">{{h.technology}}</h2>
+                                      
+                                              <!-- Progress bar 3 -->
+                                              <div class="progress mx-auto" id='{{h.completedpercentage}}'>
+                                                <span class="progress-left">
+                                                              <span class="progress-bar border-success"></span>
+                                                </span>
+                                                <span class="progress-right">
+                                                              <span class="progress-bar border-success"></span>
+                                                </span>
+                                                <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                                                  <div class="h2 font-weight-bold">{{h.completedpercentage}}<sup class="small">%</sup></div>
+                                                </div>
+                                              </div>
+                                              <!-- END -->
+                                      
+                                              <!-- Demo info -->
+                                              <div class="row text-center mt-4">
+                                                <div class="col-6 border-right">
+                                                  <div class="h4 font-weight-bold mb-0">{{h.lastweek}}%</div><span class="small text-gray">Last week</span>
+                                                </div>
+                                                <div class="col-6">
+                                                  <div class="h4 font-weight-bold mb-0">{{h.lastmonth}}%</div><span class="small text-gray">Last month</span>
+                                                </div>
+                                              </div>
+                                              <!-- END -->
+                                            </div>
+                                          </div>
+    
+                              
+                          
+                              <div class="col-xl-3 col-lg-5 mb-4">
+                                <div class="bg-white rounded-lg p-4 shadow">
+                                  <h2 class="h6 font-weight-bold text-center mb-4">{{h.technology}}</h2>
+                          
+                                  <!-- Progress bar 2 -->
+                                  <div class="progress mx-auto" id='{{h.completedpercentage}}'>
+                                    <span class="progress-left">
+                                                  <span class="progress-bar border-danger"></span>
+                                    </span>
+                                    <span class="progress-right">
+                                                  <span class="progress-bar border-danger"></span>
+                                    </span>
+                                    <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                                      <div class="h2 font-weight-bold">{{h.completedpercentage}}<sup class="small">%</sup></div>
+                                    </div>
+                                  </div>
+                                  <!-- END -->
+                          
+                                  <!-- Demo info-->
+                                  <div class="row text-center mt-4">
+                                    <div class="col-6 border-right">
+                                      <div class="h4 font-weight-bold mb-0">{{h.lastweek}}%</div><span class="small text-gray">Last week</span>
+                                    </div>
+                                    <div class="col-6">
+                                      <div class="h4 font-weight-bold mb-0">{{h.lastmonth}}%</div><span class="small text-gray">Last month</span>
+                                    </div>
+                                  </div>
+                                  <!-- END -->
+                                </div>
+                              </div>
+                          
+                              
+                          
+                              <div class="col-xl-3 col-lg-5 mb-4">
+                                <div class="bg-white rounded-lg p-4 shadow">
+                                  <h2 class="h6 font-weight-bold text-center mb-4">{{h.technology}}</h2>
+                          
+                                  <!-- Progress bar 4 -->
+                                  <div class="progress mx-auto" id='{{h.completedpercentage}}'>
+                                    <span class="progress-left">
+                                                  <span class="progress-bar border-warning"></span>
+                                    </span>
+                                    <span class="progress-right">
+                                                  <span class="progress-bar border-warning"></span>
+                                    </span>
+                                    <div class="progress-value w-100 h-100 rounded-circle d-flex align-items-center justify-content-center">
+                                      <div class="h2 font-weight-bold">{{h.completedpercentage}}<sup class="small">%</sup></div>
+                                    </div>
+                                  </div>
+                                  <!-- END -->
+                          
+                                  <!-- Demo info -->
+                                  <div class="row text-center mt-4">
+                                    <div class="col-6 border-right">
+                                      <div class="h4 font-weight-bold mb-0">{{h.lastweek}}%</div><span class="small text-gray">Last week</span>
+                                    </div>
+                                    <div class="col-6">
+                                      <div class="h4 font-weight-bold mb-0">{{h.lastmonth}}%</div><span class="small text-gray">Last month</span>
+                                    </div>
+                                  </div>
+                                  <!-- END -->
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+              </div>
+            </div>
+            </section>

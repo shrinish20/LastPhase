@@ -1,0 +1,77 @@
+<section class="main">
+		<div class="layer">
+			
+			<div class="bottom-grid float-rt">
+				
+				<div class="links float-rt">
+					
+					<ul class="links-unordered-list">
+						<li class ="active">
+							<a routerLink="/searchresult" class="">Search</a>
+						</li>
+						<li class="active">
+								<a routerLink="/mentorlogin" class="">Mentor</a>
+						</li>
+						<li class="active">
+								<a routerLink="/adminlogin" class="">Admin</a>
+						</li>										
+					</ul>
+				</div>
+			</div>
+			
+			<div class="content-w3ls">
+					<div class="header-w3l">
+							<h1>User SignUp</h1>
+						</div>
+					
+				<div class="text-center icon">
+					<span class="fa fa-user-circle"></span>
+				</div>
+				
+				<div class="content-bottom">
+					<form  [formGroup]="registrationFormGroup" >
+						<div class="field-group form-group">
+							<span class="fa fa-user" aria-hidden="true"></span>
+							<div class="wthree-field">
+								<input name="text1" id="text1" type="text" class="form-control" formControlName="username" placeholder="Name" [(ngModel)]="user.username"/>
+							</div>
+						</div>
+						<p class="bg-danger" *ngIf="registrationFormGroup.controls.username.errors?.required && registrationFormGroup.controls.username.touched">Name is required</p>
+						<div class="field-group form-group">
+								<span class="fa fa-user" aria-hidden="true"></span>
+								<div class="wthree-field">
+									<input name="text2" id="text2" type="email" class="form-control" formControlName="useremail" placeholder="Username" [(ngModel)]="user.email" />
+								</div>
+							</div>
+							<p class="bg-danger" *ngIf="registrationFormGroup.controls.useremail.errors?.required && registrationFormGroup.controls.useremail.touched">Username is required</p>
+						<div [formGroup]="passwordFormGroup">
+						<div class="field-group form-group">
+							<span class="fa fa-lock" aria-hidden="true"></span>
+							<div class="wthree-field">
+								<input name="text3" id="text3" type="password" placeholder="Password" class="form-control" formControlName="password" [(ngModel)]="user.credentials"/>				
+							</div>
+						</div>
+						<p class="bg-danger" *ngIf="passwordFormGroup.controls.password.errors?.required && passwordFormGroup.controls.password.touched">Password is required</p>
+						<div class="field-group form-group">
+							<span class="fa fa-lock" aria-hidden="true"></span>
+							<div class="wthree-field">
+								<input name="confirmpassword" id="myInput1" type="password" placeholder="Confirm Password" class="form-control" formControlName="repeatPassword" [(ngModel)]="user.confirmPassword">
+							</div>
+						</div>
+						<p class="bg-danger" *ngIf="passwordFormGroup.controls.repeatPassword.errors?.required && passwordFormGroup.controls.repeatPassword.touched">Repeat password is required</p>
+       					<p class="bg-danger" *ngIf="passwordFormGroup.errors?.doesMatchPassword">Password does not match</p>
+						</div>
+						<div class="wthree-field">
+							<button type="submit" class="btn" (click)="register()" [disabled]="!registrationFormGroup.valid" >Sign Up</button>
+					
+								
+						</div>
+		
+						
+					</form>
+				</div>
+			</div>
+			
+		</div>
+	</section>
+	

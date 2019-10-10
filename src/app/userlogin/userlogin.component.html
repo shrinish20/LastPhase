@@ -1,0 +1,70 @@
+<section class="main">
+	<div class="layer">
+		
+		<div class="bottom-grid float-rt">
+			
+			<div class="links float-rt">
+				
+				<ul class="links-unordered-list">
+					<li class ="active">
+						<a routerLink="/searchresult" class="">Search</a>
+					</li>
+					<li class="active">
+							<a routerLink="/mentorsignup" class="">Mentor SignUp</a>
+					</li>
+												
+					<li class="active">
+						<a routerLink="/usersignup" class="">User SignUp</a>
+					</li>				
+				</ul>
+			</div>
+		</div>
+		
+		<div class="content-w3ls">
+				<div class="header-w3l">
+						<h1>Login</h1>
+					</div>
+				
+			<div class="text-center icon">
+				<span class="fa fa-user-circle"></span>
+			</div>
+			
+			<div class="content-bottom">
+				<form [formGroup]="formdata"  >
+					<div class="field-group">
+						<span class="fa fa-user" aria-hidden="true"></span>
+						<div class="wthree-field">
+							<input name="uname" id="text1" type="email" class="form-control" placeholder="Username" formControlName="uname" >
+						</div>
+					</div>
+					<div class="field-group">
+						<span class="fa fa-lock" aria-hidden="true"></span>
+						<div class="wthree-field">
+							<input name="passwd" id="myInput" type="password" placeholder="Password" class="form-control" formControlName="passwd" >
+							
+						</div>
+					</div>
+					<div class="wthree-field">
+						<button type="submit" class="btn" (click)="userlogin(formdata.value)" [disabled]="!formdata.valid">Login</button>
+					</div>
+					<div>
+							
+					</div>
+					<ul class="list-login">
+						<li class="switch-agileits">
+							<label class="switch">
+								<input type="checkbox">
+								<span class="slider round"></span>
+								keep Logged in
+							</label>
+						</li>
+						
+						<li class="clearfix"></li>
+					</ul>
+					
+				</form>
+			</div>
+		</div>
+		
+    </div>
+</section>

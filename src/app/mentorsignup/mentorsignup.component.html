@@ -1,0 +1,90 @@
+<section class="main">
+    <div class="layer">
+        
+        <div class="bottom-grid float-rt">
+            
+            <div class="links float-rt">
+                
+                <ul class="links-unordered-list">
+                    <li class ="active">
+                        <a routerLink="/searchresult" class="">Search</a>
+                    </li>
+                    <li class="active">
+                            <a routerLink="/mentorlogin" class="">Mentor</a>
+                    </li>
+                    <li class="active">
+                            <a routerLink="/adminlogin" class="">Admin</a>
+                    </li>										
+                </ul>
+            </div>
+        </div>
+        
+        <div class="content-w3ls">
+                <div class="header-w3l">
+                        <h1>Mentor Signup</h1>
+                    </div>
+                
+
+            
+            <div class="content-bottom">
+                <form  [formGroup]="registrationFormGroup" >
+                        <div class="field-group form-group">
+                                <span class="fa fa-user" aria-hidden="true"></span>
+                                <div class="wthree-field">
+                                    <input name="text4" id="text4" type="text" class="form-control" formControlName="firstname" placeholder="Name" [(ngModel)]="mentor.firstname"/>
+                                </div>
+                            </div>
+                            <p class="bg-danger" *ngIf="registrationFormGroup.controls.firstname.errors?.required && registrationFormGroup.controls.firstname.touched">Name is required</p>
+                    <div class="field-group form-group">
+                        <span class="fa fa-user" aria-hidden="true"></span>
+                        <div class="wthree-field">
+                            <input name="text1" id="text1" type="email" class="form-control" formControlName="username" placeholder="Username" [(ngModel)]="mentor.username"/>
+                        </div>
+                    </div>
+                    <p class="bg-danger" *ngIf="registrationFormGroup.controls.username.errors?.required && registrationFormGroup.controls.username.touched">Username is required</p>
+     
+                    <div class="field-group form-group">
+                        <span class="fa fa-user" aria-hidden="true"></span>
+                        <div class="wthree-field">
+                            <input name="text2" id="text2" type="text" class="form-control" formControlName="linked" placeholder="LinkedIn URL" [(ngModel)]="mentor.linkedInUrl"/>
+                        </div>
+                    </div>
+                    <p class="bg-danger" *ngIf="registrationFormGroup.controls.linked.errors?.required && registrationFormGroup.controls.linked.touched">LinkedIn Profile is required</p>
+                    <div class="field-group form-group">
+                            <span class="fa fa-user" aria-hidden="true"></span>
+                            <div class="wthree-field">
+                                <input name="text6" id="text6" type="number" class="form-control" formControlName="contact" placeholder="Contact Number" [(ngModel)]="mentor.contactnumber" />
+                            </div>
+                        </div>
+                        <p class="bg-danger" *ngIf="registrationFormGroup.controls.contact.errors?.required && registrationFormGroup.controls.contact.touched">Contact Number is required</p>
+                        <div class="field-group form-group">
+                                <span class="fa fa-user" aria-hidden="true"></span>
+                                <div class="wthree-field">
+                                    <input name="text7" id="text7" type="number" class="form-control" formControlName="experience" placeholder="Experience" [(ngModel)]="mentor.experience" />
+                                </div>
+                            </div>
+                            <p class="bg-danger" *ngIf="registrationFormGroup.controls.experience.errors?.required && registrationFormGroup.controls.experience.touched">Experience is required</p>
+                    <div [formGroup]="passwordFormGroup">
+                    
+                    <div class="field-group form-group">
+                        <span class="fa fa-lock" aria-hidden="true"></span>
+                        <div class="wthree-field">
+                            <input name="confirmpassword" id="myInput1" type="password" placeholder="Password" class="form-control" formControlName="repeatPassword" [(ngModel)]="mentor.password">
+                        </div>
+                    </div>
+                    <p class="bg-danger" *ngIf="passwordFormGroup.controls.repeatPassword.errors?.required && passwordFormGroup.controls.repeatPassword.touched">Repeat password is required</p>
+                       
+                    </div>
+                    <div class="wthree-field">
+                        <button type="submit" class="btn" (click)="register()" [disabled]="!registrationFormGroup.valid" >Sign Up</button>
+                
+                            
+                    </div>
+    
+                    
+                </form>
+            </div>
+        </div>
+        
+    </div>
+</section>
